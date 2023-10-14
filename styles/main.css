@@ -1,0 +1,161 @@
+@import url(reset.css);
+
+:root {
+  /* COLOR PALETTE */
+  --primary-color: #000080;
+  --secondary-color: #ffffcc;
+  --accent-color: #ffff00;
+  --headline-color: #343a40;
+  --body-text: #212529;
+}
+.hero-page {
+  background-color: var(--secondary-color);
+  height: 100vh;
+}
+/* NAVIGATION */
+header {
+  position: relative;
+  padding: 0 4rem;
+}
+.fa-home,
+.fa-user,
+.fa-code,
+.fa-blog {
+  margin-right: 10px;
+}
+.navbar {
+  width: 100%;
+  height: 6rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+.nav-links .nav-items {
+  font-size: 2em;
+  color: var(--body-text);
+  font-weight: 300;
+  transition: all 0.4s ease;
+}
+.nav-links .nav-items:hover {
+  border-bottom: 1px solid var(--primary-color);
+  transition: all 0.4s ease;
+  padding-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.navbar .toggle-btn {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+.action-btn {
+  font-size: 1.8em;
+  background-color: var(--accent-color);
+  color: var(--body-text);
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.action-btn:hover {
+  scale: 1.08;
+  transition: all 0.4s ease;
+}
+
+.action-btn:active {
+  scale: 0.95;
+}
+
+.fa-envelope {
+  padding-right: 2px;
+}
+/* DROPDOWN MENU */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  height: 0;
+  top: 6rem;
+  width: 30em;
+  background-color: #f1f1ff;
+  backdrop-filter: blur(20px);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+  height: 80vh;
+}
+
+.dropdown-menu li {
+  padding: 0.8rem;
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown-menu li:last-child {
+  font-size: 1.2em;
+}
+.dropdown-menu .action-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RESPONSIVE NAVIGATION DESIGN */
+@media (max-width: 1150px) {
+  .nav-links,
+  .navbar .action-btn {
+    display: none;
+  }
+  .navbar .toggle-btn {
+    display: block;
+  }
+  .dropdown-menu.open {
+    height: 60vh;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu .action-btn {
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 500px) {
+  .logo {
+    display: none;
+  }
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+  .dropdown-menu.open {
+    height: 60vh;
+  }
+}
+/* NAVIGATION ENDS HERE */
+/* HERO SECTION */
