@@ -8,14 +8,11 @@
   --headline-color: #343a40;
   --body-text: #212529;
 }
-.hero-page {
-  background-color: var(--secondary-color);
-  height: 100vh;
-}
+
 /* NAVIGATION */
 header {
   position: relative;
-  padding: 0 4rem;
+  padding: 0 5.8rem;
 }
 .fa-home,
 .fa-user,
@@ -92,7 +89,7 @@ header {
   position: absolute;
   right: 2rem;
   height: 0;
-  top: 6rem;
+  top: 4rem;
   width: 30em;
   background-color: #f1f1ff;
   backdrop-filter: blur(20px);
@@ -133,6 +130,8 @@ header {
   }
   .dropdown-menu.open {
     height: 60vh;
+    background-color: var(--secondary-color);
+    z-index: 1000000000;
   }
 
   .dropdown-menu {
@@ -153,6 +152,9 @@ header {
   .logo {
     display: none;
   }
+  .action-btn {
+    display: none;
+  }
 }
 /* NAVIGATION ENDS HERE */
 /* HERO SECTION */
@@ -161,12 +163,13 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  height: 80%;
+  padding: 9.6em 0;
 }
 .hero-text {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  padding-left: 4em;
 }
 .hero-img {
   position: relative;
@@ -236,3 +239,62 @@ header {
   transition: all 0.4s ease;
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 1150px) {
+  .intro-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .primary-hero-heading {
+    font-size: 5.6em;
+    text-align: center;
+  }
+  .primary-hero-paragraph {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    padding-bottom: 0.6rem;
+    color: var(--body-text);
+    text-align: center;
+  }
+  .hero-content {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .hero-slogan {
+    font-size: 3.6em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: -0.2em;
+    color: var(--body-text);
+    text-align: center;
+  }
+
+  .hero-cta {
+    font-size: 2em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .hero-image {
+    display: none;
+  }
+}
+@media (max-width: 777px) {
+  .hero-slogan {
+    font-size: 2.4em;
+  }
+}
+@media (max-width: 545px) {
+  .primary-hero-heading {
+    font-size: 4em;
+  }
+  .primary-hero-paragraph {
+    font-size: 1.4rem;
+  }
+}
+
+/* ***************** */
+/* SECONDARY SECTION */
+/* ***************** */
