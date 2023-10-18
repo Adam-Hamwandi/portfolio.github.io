@@ -45,10 +45,10 @@ header {
   transition: all 0.4s ease;
 }
 .nav-links .nav-items:hover {
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--accent-color);
   transition: all 0.4s ease;
   padding-bottom: 10px;
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .navbar .toggle-btn {
@@ -164,6 +164,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   padding: 9.6em 0;
+  min-height: 100vh;
 }
 .hero-text {
   position: relative;
@@ -298,3 +299,161 @@ header {
 /* ***************** */
 /* SECONDARY SECTION */
 /* ***************** */
+.secondary-section {
+  background-color: #fff;
+  min-height: 80vh;
+  padding: 4rem 5.8rem;
+}
+.project-heading {
+  font-size: 4.8em;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--headline-color);
+  margin-bottom: 2em;
+}
+.project-img {
+  max-width: 100%;
+}
+
+.projects-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5.6em;
+  justify-content: center;
+}
+@media (max-width: 1000px) {
+  .projects-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 777px) {
+  .projects-card {
+    grid-template-columns: 1fr;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .secondary-section {
+    max-width: 100%;
+  }
+  .project-heading {
+    font-size: 2.8em;
+  }
+}
+.container {
+  padding: 3.2em 2.4em;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  padding-top: 0.8rem;
+}
+.coming-soon {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 0.4em;
+}
+.project-name {
+  font-size: 2.4em;
+  color: var(--accent-color);
+  letter-spacing: 1.8px;
+  margin-bottom: 0.2em;
+}
+.project-description {
+  font-size: 1.6em;
+  line-height: 1.2;
+  font-weight: 300;
+  color: var(--body-text);
+  margin-bottom: 0.8em;
+}
+.job-description {
+  font-size: 1.6em;
+  color: var(--body-text);
+  font-weight: 500;
+  margin-bottom: 0.4em;
+}
+
+.tools-heading {
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 0.4em;
+}
+.tools-info li {
+  font-size: 1.6em;
+  margin-bottom: 0.4em;
+}
+
+.tools-info li:last-child {
+  margin: 0;
+}
+.tools-info {
+  margin-bottom: 1.8em;
+}
+.fa-circle-check {
+  padding-right: 0.4em;
+  color: var(--accent-color);
+}
+.project-btn {
+  font-size: 1.8em;
+  color: var(--accent-color);
+}
+
+/* *************** */
+/* **CTA SECTION** */
+/* *************** */
+
+/* *************** */
+/* **FOOTER** */
+/* *************** */
+
+footer {
+  min-height: 30vh;
+  width: 100%;
+  background-color: var(--body-text);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.icon {
+  font-size: 4em;
+  color: var(--secondary-color);
+  padding-right: 0.4em;
+}
+.linkedin {
+  color: var(--secondary-color);
+  font-size: 1.6em;
+}
+.fa-github {
+  color: var(--secondary-color);
+}
+.github {
+  font-size: 1.6em;
+  color: var(--secondary-color);
+}
+.email {
+  font-size: 1.6em;
+  color: var(--secondary-color);
+}
+.footer-section p,
+.footer-section p .github {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 777px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-section p,
+  .footer-section p .github {
+    flex-direction: row;
+  }
+}
