@@ -1,0 +1,18 @@
+@import url(../styles/main.css);
+
+#projects {
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 10px;
+}
+.main {
+  height: 100vh;
+  background-color: #fff;
+}
+h1 {
+  font-size: 4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
