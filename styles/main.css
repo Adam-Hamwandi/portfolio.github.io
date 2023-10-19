@@ -20,6 +20,11 @@ header {
 .fa-blog {
   margin-right: 6px;
 }
+.nav-links #home {
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 10px;
+}
 .navbar {
   width: 100%;
   height: 6rem;
